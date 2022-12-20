@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ff-texting: 'Palanquin';
+    --ff-menu: 'Staatliches';
+
+    --hue: 233;
+    --bg-primary-: hsl(var(--hue), 100%, 97%);
+    --bg-secundary: hsl(var(--hue), 91%, 96%);
+    --fz-primary: hsl(var(--hue), 17%, 35%);
+
+    font-size: 62.5%;
+    --fs-body: 2.0rem;
+}
+
+.page {
+    padding: 0 6rem;
+    margin:  0 auto;
+  }
+  
+
+body {
+    background-color: var(--bg-primary-);
+    font-size: var(--fs-body);
+}
+
+img {
+   width: 100%; 
+   height: auto;
+}
+
+
+.card {
+    position: relative;
+
+    animation: topdown; 
+    animation-duration: 700ms;
+    animation-fill-mode: backwards;
+    animation-delay: 100ms;
+    animation-timing-function: ease;
+}
+
+
+.card img {
+    height: 50rem;
+    object-fit: cover;
+}
+
+.card h2 {
+    position: absolute;
+    font-family: var(--ff-menu); 
+    top: 1.6rem;
+    right: 1.6rem;
+}
+
+.card h2 span {
+    border-radius: 2rem;
+    background-color: var(--bg-secundary);
+    font-size: var(--fz-primary);
+    font-weight: 400;
+    color: var(--fz-primary);
+    padding: 0 1.6rem;
+
+    animation: topdown; 
+    animation-duration: 700ms;
+    animation-fill-mode: backwards;
+    animation-delay: 400ms;
+    animation-timing-function: ease;
+
+}
+
+
+  @keyframes topdown {
+    0% {
+      opacity: 0;
+      transform: translateX(-15px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  
+
+@media (min-width: 700px) {
+     .page {
+      max-width: 76.8rem;
+      padding: 0 5rem;
+    } 
+}
